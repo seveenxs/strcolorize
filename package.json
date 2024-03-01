@@ -1,0 +1,23 @@
+{
+  "name": "strcolorize",
+  "version": "1.0.7",
+  "description": "A lightweight package for coloring text using ANSI codes, perfect for adding visual style to terminal outputs.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "terminal",
+    "console",
+    "colorize",
+    "ansi",
+    "colored"
+  ],
+  "author": "seveenxs",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.11.19",
+    "tsx": "^4.7.1",
+    "typescript": "^5.3.3"
+  }
+}
