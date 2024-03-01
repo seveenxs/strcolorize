@@ -1,6 +1,6 @@
 {
   "name": "strcolorize",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A lightweight package for coloring text using ANSI codes, perfect for adding visual style to terminal outputs.",
   "main": "dist/index.js",
   "scripts": {

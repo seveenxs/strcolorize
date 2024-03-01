@@ -79,3 +79,6 @@ colorize('[Welcome to [strcolorize](magenta) library](bold)', true)
 - `bgBlue`
 - `bgCyan`
 - `bgWhite`
+
+## 💖 Contribuition
+Your contributions are highly valued! Feel free to enhance this project by opening an [issue](https://github.com/seveenxs/strcolorize/issues) to report any problems or submitting a [pull request](https://github.com/seveenxs/strcolorize/pulls) with your proposed changes.
