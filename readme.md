@@ -14,10 +14,10 @@
 
 ## 📦 Install
 ```sh
-npm install strcolorize
+npm install strcolorize@beta
 ```
 ```sh
-yarn install strcolorize
+npm install strcolorize@beta
 ```
 
 ## 🍿 Highlights
