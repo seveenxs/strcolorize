@@ -1,16 +1,15 @@
 import { formatString } from "./formatString";
 
-const InternalColr = /\[([^\[\]]*?)\]\((.*?)\)/g;
-const ExternalColr = /\[(.*?)\]\((.*?)\)/g;
+const colorizeRgx = /\[((?:\[[^\[\]]*\]|[^\[\]])*)\]\((.*?)\)/g;
 
 function colorize(text: string, terminal?: false): string;
 function colorize(text: string, terminal?: true): void;
 function colorize(text: string, terminal: Boolean = false): string | void {
-    if (InternalColr.test(text))
-        text = text.replace(InternalColr, (_, content: string, codes: string) => formatString(content, codes));
-
     const colored =
-        text.replace(ExternalColr, (_, content: string, codes: string) => formatString(content, codes));
+        text.replace(colorizeRgx, (_, content: string, codes: string) => {
+            content = content.replace(colorizeRgx, (_, content: string, codes: string) => formatString(content, codes))
+            return formatString(content, codes)
+        });
 
     if (terminal)
         console.log(colored);
