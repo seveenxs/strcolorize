@@ -1,4 +1,4 @@
-export declare const ansiCode: {
+export declare const styles: {
     reset: number[];
     bold: number[];
     italic: number[];
@@ -39,3 +39,4 @@ export declare const ansiCode: {
     bgCyanBright: number[];
     bgWhiteBright: number[];
 };
+export declare const colorsCodes: any;
