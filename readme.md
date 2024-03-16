@@ -23,8 +23,6 @@ To use this library, you must first [install it](#installation) in your project.
 <img src="https://i.postimg.cc/4xVMLpK1/Screenshot-211.png" href="Terminal output">
 
 ## 🔹 Ansi styles
-Aqui está a lista organizada:
-
 | Names             | Types       |
 |-------------------|-------------|
 | reset             | modifier    |
