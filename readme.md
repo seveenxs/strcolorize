@@ -14,7 +14,7 @@ yarn install strcolorize
 ```
 
 ## ❓ How To Usage
-To use this library, you must first [install it](#Installation) in your project. After that, you will see an example below of how to import and use it in your project.
+To use this library, you must first [install it](#installation) in your project. After that, you will see an example below of how to import and use it in your project.
 
 <img src="https://i.postimg.cc/76sZQFC0/3.png">
 
