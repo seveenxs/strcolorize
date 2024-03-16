@@ -1,84 +1,73 @@
-## 🧶 strcolorize
-**strcolorize** is a simple library for coloring text using codes (ANSI and hexadecimal), perfect for styling your terminal strings. **strcolorize** uses inline formatting (applies text formatting styles directly within the text line) to colorize your texts.
+# 🖍️ strcolorize
+The **strcolorize** library is a simple and practical tool designed to colorize terminal outputs using **`hexadecimal`** and **`ANSI`** codes. While some libraries modify the string prototype to colorize texts, the operation of **strcolorize** is different. It uses inline formatting to colorize your text.
 
----
+> **Inline formatting**\
+> Inline formatting allows adding colors directly within text using specific codes (e.g., **`hexadecimal`** or **`ANSI`**) around desired portions, without altering the string's structure. This method offers flexibility in applying color styles to terminal outputs while preserving the integrity and structure of the original data.
 
-<p align="center">
-  <img src="https://img.shields.io/npm/v/strcolorize?style=flat&logoColor=%23604970&label=version&color=%23595990" alt="NPM Version">
-  <img src="https://img.shields.io/npm/dm/strcolorize?style=flat&color=%23595990" alt="NPM Downloads">
-  <img src="https://img.shields.io/npm/l/strcolorize?style=flat&color=%23595990" alt="NPM License">
-  <br><img src="https://cdn.imgchest.com/files/pyq9cmxw8g4.png" alt="Styles">
-</p>
-
----
-
-## 📦 Install
-```sh
+## 📦 Installation
+To install the library using **npm** or **yarn**
+```bash
 npm install strcolorize
 ```
-```sh
+```bash
 yarn install strcolorize
 ```
 
-## 🍿 Highlights
-- No dependencies
-- Ability to nest styles
-- Doesn't extend `String.prototype`
-- Clean and focused
-- Support for `Hexadecimal` codes (text colors)
+## ❓ How To Usage
+To use this library, you must first [install it](#Installation) in your project. After that, you will see an example below of how to import and use it in your project.
 
-## 🎈 How To Usage?
-`colorize(input: string, terminal: boolean [Opcional]):`
-- `input:` The text to be styled.
-- `terminal:` Print directly to the terminal [default is false].
+<img src="https://i.postimg.cc/76sZQFC0/3.png">
 
-```typescript
-const colorize = require('strcolorize'); // module commonjs
-import colorize from 'strcolorize'; // module esm
+### TERMINAL OUTPUT
 
-// Coloring with ANSI codes.
-colorize('This word is [red](red)', true)
+<img src="https://i.postimg.cc/4xVMLpK1/Screenshot-211.png" href="Terminal output">
 
-// Coloring with hexadecimal codes.
-colorize('This especif word is [blue](#0000FF)', true)
+## 🔹 Ansi styles
+Aqui está a lista organizada:
 
-// Nesting colorizations.
-colorize('[Welcome to [strcolorize](magenta) library](bold)', true)
-```
-
-**Terminal output:**<br>
-<br><img src="https://cdn.imgchest.com/files/myd5cpn8op4.png" alt="Styles">
-
-## 🎨 Colors and Styles
-
-### Text styles:
-- `reset:` Reset the current style.
-- `bold:` Make the text bold.
-- `italic:` Make the text italic.
-- `inverse:` Invert background and foreground colors.
-- `underline:` Put a horizontal line below the text.
-- `hidden:` Print the text but make it invisible.
-- `strikethrough:` Puts a horizontal line through the center of the text.
-
-### Text colors:
-- `black`
-- `red`
-- `green`
-- `yellow`
-- `blue`
-- `magenta`
-- `cyan`
-- `white`
-- `gray`
-
-### Text backgrounds:
-- `bgBlack`
-- `bgRed`
-- `bgGreen`
-- `bgYellow`
-- `bgBlue`
-- `bgCyan`
-- `bgWhite`
+| Names             | Types       |
+|-------------------|-------------|
+| reset             | modifier    |
+| bold              | modifier    |
+| italic            | modifier    |
+| dim               | modifier    |
+| inverse           | modifier    |
+| underline         | modifier    |
+| hidden            | modifier    |
+| strikethrough     | modifier    |
+| overline          | modifier    |
+| black             | color       |
+| red               | color       |
+| green             | color       |
+| yellow            | color       |
+| blue              | color       |
+| magenta           | color       |
+| cyan              | color       |
+| white             | color       |
+| blackBright       | color       |
+| redBright         | color       |
+| greenBright       | color       |
+| yellowBright      | color       |
+| blueBright        | color       |
+| magentaBright     | color       |
+| cyanBright        | color       |
+| whiteBright       | color       |
+| bgBlack           | background  |
+| bgRed             | background  |
+| bgGreen           | background  |
+| bgYellow          | background  |
+| bgBlue            | background  |
+| bgMagenta         | background  |
+| bgCyan            | background  |
+| bgWhite           | background  |
+| bgBlackBright     | background  |
+| bgRedBright       | background  |
+| bgGreenBright     | background  |
+| bgYellowBright    | background  |
+| bgBlueBright      | background  |
+| bgMagentaBright   | background  |
+| bgCyanBright      | background  |
+| bgWhiteBright     | background  |
 
 ## 💖 Contribuition
 Your contributions are highly valued! Feel free to enhance this project by opening an [issue](https://github.com/seveenxs/strcolorize/issues) to report any problems or submitting a [pull request](https://github.com/seveenxs/strcolorize/pulls) with your proposed changes.
