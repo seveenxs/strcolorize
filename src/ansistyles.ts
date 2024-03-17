@@ -61,34 +61,7 @@ function assembly() {
             value: styles[styleName as keyof typeof styles],
         });
     };
-
-    Object.defineProperty(styles, 'rgbToAnsi', {
-        value: (input: string): string | null => {
-            const matches = /^#?[a-f\d]{6}|[a-f\d]{3}/i.exec(input);
-            if (!matches) return null;
-
-            let [color] = matches;
-
-            if (color.replace('#', '').length === 3)
-                color = [...color.replace('#', '')].map(char => char + char).join('');
-
-            const hexColor = color.match(/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})/i);
-
-            let [red, green, blue] = [
-                parseInt(hexColor![1], 16),
-                parseInt(hexColor![2], 16),
-                parseInt(hexColor![3], 16)
-            ]
-
-            const rgbColor = 16
-            + (36 * Math.round(red / 255 * 5))
-            + (6 * Math.round(green / 255 * 5))
-            + Math.round(blue / 255 * 5);
-
-            return `\x1b[38;5;${rgbColor}m`
-        }
-    })
-
+    
     return styles;
 };
 
