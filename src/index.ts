@@ -1,4 +1,4 @@
-import styles, { CSPair } from 'ansi-styles';
+import {ansicodes} from './ansistyles';
 import hexToAnsi from './hexToAnsi';
 import Group from './utils';
 
@@ -36,7 +36,7 @@ function colorize(text: string, terminal: boolean = false): string | void {
             let concat: string = ''
 
             for (const code of codes.split(/[\s,]/g)) {
-                let style = styles[code.toLowerCase() as keyof typeof styles] as CSPair;
+                let style = ansicodes[code.toLowerCase() as keyof typeof ansicodes];
                 let hexcode = hexToAnsi(code.toLowerCase());
 
                 if (style !== undefined) {

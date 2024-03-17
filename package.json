@@ -1,6 +1,6 @@
 {
   "name": "strcolorize",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "author": "seveenxs",
   "description": "A library for coloring strings in your terminal.",
   "license": "MIT",
@@ -15,11 +15,11 @@
   "bugs": "https://github.com/seveenxs/strcolorize/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/seveenxs/strcolorize.git"
+    "url": "git+https://github.com/seveenxs/strcolorize.git"
   },
+  "scripts": {},
   "devDependencies": {
     "@types/node": "^20.11.19",
-    "ansi-styles": "^6.2.1",
     "tsx": "^4.7.1",
     "typescript": "^5.3.3"
   }
