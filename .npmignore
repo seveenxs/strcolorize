@@ -1,4 +1,4 @@
-src/
+source/
 node_modules/
 package-lock.json
 .gitignore

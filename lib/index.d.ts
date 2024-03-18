@@ -4,6 +4,6 @@
  * @param terminal A boolean flag indicating whether to print the colorized text directly to the terminal.
  * @returns If `terminal` is true, prints the colorized text to the terminal and returns void. Otherwise, returns the colorized text as a string.
  */
-declare function colorize(text: string, terminal?: true): void;
 declare function colorize(text: string, terminal?: false): string;
+declare function colorize(text: string, terminal?: true): void;
 export default colorize;

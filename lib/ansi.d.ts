@@ -1,6 +1,54 @@
-export declare const styles: {
+export interface Pair {
+    open: string;
+    close: string;
+}
+export interface AnsiPairs {
+    reset: Pair;
+    bold: Pair;
+    dim: Pair;
+    italic: Pair;
+    underline: Pair;
+    overline: Pair;
+    inverse: Pair;
+    hidden: Pair;
+    strikethrough: Pair;
+    black: Pair;
+    red: Pair;
+    green: Pair;
+    yellow: Pair;
+    blue: Pair;
+    magenta: Pair;
+    cyan: Pair;
+    white: Pair;
+    blackBright: Pair;
+    redBright: Pair;
+    greenBright: Pair;
+    yellowBright: Pair;
+    blueBright: Pair;
+    magentaBright: Pair;
+    cyanBright: Pair;
+    whiteBright: Pair;
+    bgBlack: Pair;
+    bgRed: Pair;
+    bgGreen: Pair;
+    bgYellow: Pair;
+    bgBlue: Pair;
+    bgMagenta: Pair;
+    bgCyan: Pair;
+    bgWhite: Pair;
+    bgBlackBright: Pair;
+    bgRedBright: Pair;
+    bgGreenBright: Pair;
+    bgYellowBright: Pair;
+    bgBlueBright: Pair;
+    bgMagentaBright: Pair;
+    bgCyanBright: Pair;
+    bgWhiteBright: Pair;
+}
+export declare const ansi: {
     reset: number[];
     bold: number[];
+    dim: number[];
     italic: number[];
     underline: number[];
     overline: number[];
@@ -40,4 +88,3 @@ export declare const styles: {
     bgCyanBright: number[];
     bgWhiteBright: number[];
 };
-export declare const ansicodes: any;
