@@ -16,30 +16,27 @@ function assembly(): AnsiPairs {
 export const styles = assembly();
 
 export function hexToAnsi(hex: string): Pair | null {
-    let HEX_CAPTURE = /[a-f\d]{3}|[a-f\d]{6}/i;
+    let HEX_CAPTURE = /[a-f\d]{6}|[a-f\d]{3}/i;
     let matches = HEX_CAPTURE.exec(hex);
 
-    if (!matches)
-        return null;
+    if (!matches) return null;
+    let [color] = matches;
 
-    if (matches[0].length === 3)
-        matches[0] = [...matches[0]].map(char => char + char).join('');
+    if (color.charAt(0) == '#')
+        color = color.replaceAll('#', '');
 
-    const integer = parseInt(matches[0], 16);
+    if (color.length === 3)
+        color = [...color].map(char => char + char).join('');
 
-    const [red, green, blue] = [
-        (integer >> 16) & 0xFF,
-        (integer >> 8) & 0xFF,
-        integer & 0xFF,
+    let bigint = parseInt(color, 16);
+    let [red, green, blue] = [
+        (bigint >> 16) & 255,
+        (bigint >> 8) & 255,
+        bigint & 255
     ];
 
-    const ansicode = 16
-        + (36 * Math.round(red / 255 * 5))
-        + (6 * Math.round(green / 255 * 5))
-        + Math.round(blue / 255 * 5);
-
     return {
-        open: `\u001B[38;5;${ansicode}m`,
-        close: `\u001B[39m`
-    }
-}
+        open: `\u001b[38;2;${red};${green};${blue}m`,
+        close: '\u001b[39m'
+    };
+};
